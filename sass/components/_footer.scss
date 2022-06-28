@@ -1,0 +1,146 @@
+.footer {
+  background-color: map-get($colors, 'footer-bg');
+  padding: 60px 0;
+}
+
+.contacts-footer__address {
+  font-style: normal;
+}
+
+.contacts-footer__list {
+  @include font-set(false, false, 1.7, false, map-get($colors, 'secondary-white'));
+}
+
+.contacts-footer__item + .contacts-footer__item {
+  margin-top: 9px;
+}
+
+.contacts-footer__link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: map-get($colors, 'accent');
+  }
+}
+
+.contacts-footer__link--address-location {
+  color: map-get($colors, 'primary-white');
+}
+
+.footer__join {
+  margin-left: 70px;
+}
+
+.join__text {
+  @include font-set(false, 700, 1.1, 0.03em, map-get($colors, 'primary-white'));
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.join__social-list {
+  display: flex;
+}
+
+.join__social-item {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  border-radius: 50%;
+}
+
+.join__social-item + .join__social-item {
+  margin-left: 10px;
+}
+
+.join__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: map-get($colors, 'primary-white');
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: map-get($colors, 'accent');
+  }
+}
+
+.join__social-icon {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+}
+
+.footer__subscribe {
+  margin-left: auto;
+}
+
+.subscribe__text {
+  @include font-set(false, 700, 1.1, 0.03em, map-get($colors, 'primary-white'));
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.subscribe__form {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.subscribe__input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding-left: 15px;
+  @include font-set(false, false, 1.3, false, map-get($colors, 'secondary-white'));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: map-get($colors, 'footer-bg');
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-color: map-get($colors, 'accent');
+  }
+
+  &:focus {
+    outline: transparent;
+    color: map-get($colors, 'primary-white');
+  }
+
+  &::placeholder {
+    color: map-get($colors, 'secondary-white');
+  }
+}
+
+.subscribe__button {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  @include font-set(false, 700, 1.9, 0.06em, map-get($colors, 'primary-white'));
+  padding: 10px 28px;
+  background-color: map-get($colors, 'accent');
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: map-get($colors, 'secondary-accent');
+  }
+}
+
+.subscribe__icon {
+  margin-left: 10px;
+  fill: currentColor;
+}

@@ -1,0 +1,30 @@
+.advantages {
+  line-height: 1.7;
+}
+
+.advantages__list {
+  display: flex;
+}
+
+.advantages-item {
+  width: 270px;
+}
+
+.advantage-item__svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: map-get($colors, 'section-bg');
+}
+
+.advantage-item + .advantage-item {
+  margin-left: 30px;
+}
+
+.advantage-item__title {
+  margin-bottom: 10px;
+  @include font-set(inherit, 700, 1.1, false, map-get($colors, 'title-text'));
+  text-transform: uppercase;
+}
